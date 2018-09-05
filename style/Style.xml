@@ -12,7 +12,7 @@
   <property name="severity" value="warning"/>
   <module name="TreeWalker">
     <property name="tabWidth" value="4"/>
-        <module name="JavadocMethod">
+    <module name="JavadocMethod">
       <property name="scope" value="protected"/>
       <property name="allowUndeclaredRTE" value="true"/>
       <property name="suppressLoadErrors" value="true"/>
@@ -171,8 +171,4 @@
     <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
   </module>
   <module name="Translation"/>
-  <module name="SuppressionCommentFilter">
-    <property name="offCommentFormat" value="CSOFF:"/>
-    <property name="onCommentFormat" value="CSON:"/>
-  </module>
 </module>
