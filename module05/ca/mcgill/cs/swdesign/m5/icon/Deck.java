@@ -9,7 +9,7 @@ import ca.mcgill.cs.swdesign.m5.icon.Card.Suit;
 /**
  * A deck of cards.
  */
-public class Deck
+public class Deck implements Cloneable
 {
 	private Stack<Card> aCards;
 	
@@ -37,7 +37,20 @@ public class Deck
 		}
 		Collections.shuffle(aCards);
 	}
-	
+
+	@Override
+  public Deck clone() {
+    try {
+      Deck lReturn = (Deck) super.clone();
+      lReturn.aCards = new Stack<>();
+      for (Card card : aCards) {
+        lReturn.aCards.add(card);
+      }
+      return lReturn;
+    } catch (CloneNotSupportedException e) {
+      return null;
+    }
+    }
 	/**
 	 * @return True if there are no cards in the deck.
 	 */
