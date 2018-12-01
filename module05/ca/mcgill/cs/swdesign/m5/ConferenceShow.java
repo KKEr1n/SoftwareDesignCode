@@ -22,6 +22,8 @@ public class ConferenceShow implements Show
 		aDecorated = pDecorated;
 		aTime = pTime;
 		aSpeaker = pSpeaker;
+    //another decorator
+    // BufferedInputStream bis = new BufferedInputStream(new FileInputStream(new File("a.txt")));
 	}
 	
 	/* (non-Javadoc)

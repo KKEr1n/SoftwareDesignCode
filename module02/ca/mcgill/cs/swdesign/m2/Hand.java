@@ -1,6 +1,7 @@
 package ca.mcgill.cs.swdesign.m2;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
@@ -41,6 +42,19 @@ public class Hand implements Iterable<Card>
 		aCards.add(pCard);
 	}
 
+//  public static Comparator<Hand> createByRankComparator(Card.Rank pRank)
+//  {
+//    return new Comparator<Hand>()
+//    {
+//      @Override
+//      public int compare(Hand pHand1, Hand pHand2)
+//      {
+//        //pRank from outer method
+//        //return countCards(pHand1, pRank) - countCards(pHand2, pRank);
+//      }
+//      //...
+//    };
+//  }
 	@Override
 	public Iterator<Card> iterator()
 	{

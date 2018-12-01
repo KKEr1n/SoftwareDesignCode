@@ -25,10 +25,13 @@ public class Movie implements Show
 	}
 	
 	@Override
+
 	public Movie clone()
 	{
 		try
 		{
+      //still returns a Movie, even using Object.clone()
+      // "shallow" copy
 			return (Movie) super.clone();
 		}
 		catch (CloneNotSupportedException e)
