@@ -17,11 +17,11 @@ public class SerializeEmployeeTester
       staff[0].setBuddy(staff[1]);
       staff[1].setBuddy(staff[0]);
       ObjectOutputStream out = new ObjectOutputStream(
-            new FileOutputStream("module10/ca.uvic.seng330.m10/staff.dat"));
+            new FileOutputStream("ca.uvic.seng330.m10/staff.dat"));
       out.writeObject(staff);
       out.close();
       ObjectInputStream in = new ObjectInputStream(
-            new FileInputStream("module10/ca.uvic.seng330.m10/staff.dat"));
+            new FileInputStream("ca.uvic.seng330.m10/staff.dat"));
       Employee[] staff2 = (Employee[]) in.readObject();
       in.close();
       for (Employee e : staff2)
