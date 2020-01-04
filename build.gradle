@@ -1,0 +1,66 @@
+plugins {
+    id 'java-library'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+task welcome(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    main = "ca.mcgill.cs.swdesign.m0.demo.Welcome"
+    //args "arg1", "arg2"
+}
+
+javafx {
+    version = '11'
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.swing', 'javafx.media', 'javafx.graphics']
+    sdk = System.getenv('JAVAFX_HOME')
+    if (sdk == null || sdk.isBlank()) {
+        throw new InvalidUserDataException("JAVAFX_HOME environment variable is not set. It must be set to root folder where JAVAFX SDK is located")
+    }
+    application {
+        def javafxHome = System.getenv('JAVAFX_HOME')
+        mainClassName = 'ca.mcgill.cs.swdesign.m0.demo.Welcome'
+        applicationName = 'Software Design'
+        applicationDefaultJvmArgs = [
+                "--module-path=${javafxHome}" + File.separator + 'lib',
+                '--add-modules=javafx.controls,javafx.swing,javafx.media,javafx.graphics']
+        println("applicationDefaultJvmArgs:" + applicationDefaultJvmArgs)
+    }
+}
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    // Use jcenter for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+    mavenCentral()
+}
+
+test {
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+    }
+}
+
+dependencies {
+    // This dependency is exported to consumers, that is to say found on their compile classpath.
+    // api 'org.apache.commons:commons-math3:3.6.1'
+    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
+    // implementation 'org.json:json:20180813','org.slf4j:slf4j-simple:1.7.25'
+    implementation(
+               'de.dynamicfiles.projects.gradle.plugins', name: 'javafx-gradle-plugin', version: '8.8.2'
+    )
+    testImplementation (
+            'junit:junit:4.11',
+            // "org.mockito:mockito-core:2.+"
+    )
+
+    testRuntimeOnly(
+            'junit:junit:4.11'
+    )
+}
