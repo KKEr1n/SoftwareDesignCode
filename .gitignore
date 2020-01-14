@@ -1,2 +1,5 @@
 /bin/
 .classpath
+/gradlew
+/gradlew.bat
+/bin/
