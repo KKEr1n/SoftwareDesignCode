@@ -28,7 +28,7 @@ public class AlternatingLabelProvider
 	 */
 	public String getLabel(boolean pLabel)
 	{
-		if( pLabel )
+		if( !pLabel )
 		{
 			return label1;
 		}

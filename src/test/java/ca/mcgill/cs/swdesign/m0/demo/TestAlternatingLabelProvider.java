@@ -27,7 +27,7 @@ public class TestAlternatingLabelProvider {
    */
   @Test
   public void testAll() {
-    assertEquals(LABEL_1, aFixture.getLabel(false));
+    assertEquals(LABEL_1, aFixture.getLabel(true));
     assertEquals(LABEL_2, aFixture.getLabel(false));
     assertEquals(LABEL_1 + " " + LABEL_2, aFixture.getBoth());
   }
