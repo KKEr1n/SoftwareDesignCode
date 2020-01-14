@@ -9,7 +9,10 @@ import ca.mcgill.cs.swdesign.m1.Card7.Rank;
  */
 public final class Client {
   private Client() {
+    // do some stuff in here
   }
+
+  //how do we handle a Deck?
 
   /**
    * @param pArgs Not used here
