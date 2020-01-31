@@ -1,4 +1,4 @@
-package ca.uvic.seng330.m2;
+package ca.uvic.seng330;
 
 final class Car implements Comparable<Car>{
   private final int topSpeed;

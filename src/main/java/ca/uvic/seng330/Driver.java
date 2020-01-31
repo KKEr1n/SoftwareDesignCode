@@ -1,5 +1,8 @@
 
-package ca.uvic.seng330.m2;
+package ca.uvic.seng330;
+
+import ca.uvic.seng330.Car;
+import ca.uvic.seng330.m2.ByAccelComparator;
 
 import java.util.ArrayList;
 

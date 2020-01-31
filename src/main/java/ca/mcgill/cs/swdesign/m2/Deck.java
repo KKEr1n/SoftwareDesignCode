@@ -8,7 +8,7 @@ import java.util.Stack;
 import ca.mcgill.cs.swdesign.m2.Card.Rank;
 import ca.mcgill.cs.swdesign.m2.Card.Suit;
 
-public class Deck
+public class Deck 
 {
 	private final Stack<Card> aCards;
 	

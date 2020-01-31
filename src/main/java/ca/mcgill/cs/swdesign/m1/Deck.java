@@ -22,9 +22,9 @@ public class Deck
    /* The back door is open */
    public void applyAll( List<Stack<Card>> pTaskList )
    { pTaskList.add(aCards); }
+
+  public List<Card> getCards2()
+  { return new ArrayList<>(aCards); }
 }
 
-public class Deck2 {
-  private List<Card> aCards = new ArrayList<>();
-  public List<Card> getCards() { return aCards; } //escae the scope restriction
-}
+

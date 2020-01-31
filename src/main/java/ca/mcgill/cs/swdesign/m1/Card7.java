@@ -21,7 +21,7 @@ public class Card7
 	{
 		CLUBS, DIAMONDS, SPADES, HEARTS
 	}
-	
+
 	public static final String[] RANKS = {"Ace", "Two", "Three", "Four", "Five",
 			"Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
 	
@@ -40,6 +40,7 @@ public class Card7
 		assert pRank != null && pSuit != null;
 		aRank = pRank;
 		aSuit = pSuit;
+
 	}
 	
 	/**
