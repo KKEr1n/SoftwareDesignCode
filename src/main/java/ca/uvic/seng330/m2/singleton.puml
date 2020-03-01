@@ -1,0 +1,9 @@
+@startuml
+class Singleton {
+-instance:Singleton
+-Singleton()
++getInstance():Singleton
++someSingletonOperation():void
+}
+Singleton -> Singleton
+@enduml

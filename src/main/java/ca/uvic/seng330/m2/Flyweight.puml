@@ -1,0 +1,12 @@
+@startuml
+abstract class Flyweight {
+    persistentState();
+}
+class Client
+class ConcreteFlyweight1
+class ConcreteFlyweight2
+Client -> Flyweight
+ConcreteFlyweight1 -|> Flyweight
+ConcreteFlyweight2 -|> Flyweight
+
+@enduml
