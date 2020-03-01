@@ -14,8 +14,30 @@ public class Card implements Comparable<Card>
 			return name().substring(0, 1) + name().substring(1).toLowerCase();
 		}
 	}
-	
-	/**
+
+  @Override
+  public boolean equals(Object pObject) {
+    if (pObject == null) {
+      return false;
+    } // As required by the specification
+    else if (pObject == this) {
+      return true;
+    } // Standard optimization
+    else if (pObject.getClass() != getClass()) {
+      return false;
+    } else {
+      // Actual comparison code
+      return aRank == ((Card) pObject).aRank && ((Card) pObject).aSuit == aSuit;
+    }
+  }
+
+  @Override
+  public int hashCode() {
+    return super.hashCode();
+    //what goes here instead?
+  }
+
+  /**
 	 * A card's suit.
 	 */
 	public enum Suit

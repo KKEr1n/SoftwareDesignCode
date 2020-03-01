@@ -59,4 +59,5 @@ dependencies {
     testRuntimeOnly(
             'junit:junit:4.11'
     )
+    implementation 'junit:junit:4.12'
 }

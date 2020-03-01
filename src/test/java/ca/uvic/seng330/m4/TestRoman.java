@@ -16,7 +16,7 @@ public class TestRoman {
   @Test
   public void TestSingle(){
     Roman2Decimal r = new Roman2Decimal("I");
-    Assert.assertEquals("test output", r.convert(), 1);
+    Assert.assertEquals("test output",  1, r.convert());
     // multiple assertions? How many single do we need to be confident?
   }
 

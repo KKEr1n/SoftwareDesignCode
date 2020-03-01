@@ -1,7 +1,6 @@
 package ca.mcgill.cs.swdesign.m2;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 

@@ -1,64 +1,30 @@
 package ca.uvic.seng330.m2;
 
-import java.util.Comparator;
+public class Car implements Comparable<Car>{
+  private final int topSpeed;
+  private final int brakingDistance;
 
-public class Car  implements Comparable {
+  public Car(Car c) {
+    topSpeed = c.topSpeed;
+    brakingDistance = c.brakingDistance;
+  }
 
-  public final int topSpeed;
-  public final int accel;
-
-  public Car(int topSpeed) {
+  public Car(int topSpeed, int brakingDistance) {
     this.topSpeed = topSpeed;
+    this.brakingDistance = brakingDistance;
   }
 
-  public int compareTo(Car o, feature f) {
-    innerCompare(o, feature);
-//    return topSpeed - o.topSpeed;
-    //what if we want to compare on
-    // acceleration?
-    return o.accel - this.accel;
+  public int getBrakingDistance() {
+    return brakingDistance;
   }
 
-  private int innerCompare(Car, feature) {
-    if feature=speed //dosomething
+  public int getTopSpeed() {
+    return topSpeed;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //factory method
-  public static Comparator<Car> createByRankComparator() {
-    return new Comparator<Car>() {
-      @Override
-      public int compare(Car pCar1, Car pCar2) {
-        return pCar1.topSpeed - pCar2.topSpeed;
-        true True true
-      }
-    };
-  }
-
-  class BySpeedComparator implements Comparator<Car> {
-
-    @Override
-    public int compare(Car o1, Car o2) {
-      return o1.topSpeed - o2.topSpeed;
-    }
+  @Override
+  //we don't have an Enum to use for comparison
+  public int compareTo(Car o) {
+    return topSpeed - o.topSpeed;
   }
 }
-

@@ -1,10 +1,10 @@
 package ca.uvic.seng330.m2;
 
+import ca.mcgill.cs.swdesign.m2.Card;
+
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Stack;
-
-import ca.mcgill.cs.swdesign.m2.Card;
 
 public class Deck2
 {

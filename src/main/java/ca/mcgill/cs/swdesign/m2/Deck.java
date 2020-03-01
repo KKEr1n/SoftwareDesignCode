@@ -5,10 +5,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Stack;
 
-import ca.mcgill.cs.swdesign.m2.Card.Rank;
-import ca.mcgill.cs.swdesign.m2.Card.Suit;
-
-public class Deck 
+public class Deck
 {
 	private final Stack<Card> aCards;
 	
@@ -63,9 +60,9 @@ public class Deck
 	public void shuffle()
 	{
 		aCards.clear();
-		for(Suit suit : Suit.values() )
+		for(Card.Suit suit : Card.Suit.values() )
 		{
-			for( Rank rank : Rank.values())
+			for( Card.Rank rank : Card.Rank.values())
 			{
 				aCards.push(new Card(rank, suit));
 			}
